@@ -55,6 +55,7 @@ fibanachiFunction(0, 1);
 //use of arrow function and array map method to achieve the fibanchi sequence
 // alot of improvement need
 const ourArrayPlaceholders = Array(5).fill(0);
+//create finachi array of the above array
 const fibanchiSequenceofNumber = ourArrayPlaceholders.map((num, indexOfArray)=>{
     if(indexOfArray == 0){
         ourArrayPlaceholders[indexOfArray] = num;
@@ -64,7 +65,8 @@ const fibanchiSequenceofNumber = ourArrayPlaceholders.map((num, indexOfArray)=>{
         ourArrayPlaceholders[indexOfArray] = 1;
         return 1;
     }
-    else{      
+    else{
+        //next sequence                     = second last in the array              + last in the array
         ourArrayPlaceholders[indexOfArray] = ourArrayPlaceholders[indexOfArray - 2] + ourArrayPlaceholders[indexOfArray - 1];
         return ourArrayPlaceholders[indexOfArray - 2] + ourArrayPlaceholders[indexOfArray - 1];
     }
