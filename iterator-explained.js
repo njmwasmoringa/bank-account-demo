@@ -70,6 +70,9 @@ function addPrice(initialValue, product){
     return initialValue + product.price;
 }
 
+// Calling / Invoking the function
+addPrice(0, { name:'Break', price:0 });
+
 let newTotalSpent = 0;
 //implementation of the reduce iterator
 newTotalSpent = listOfProducts.reduce(addPrice, newTotalSpent);
